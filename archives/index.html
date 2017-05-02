@@ -1,0 +1,114 @@
+<html>
+  <head><!chrome first reads, import files>
+    <title>My first html page</title><!shows on tab>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body><!actual content in body>
+    <h1>Dog Voting App</h1>
+    <h2>Choose the cutest dog!</h2>
+    <br>
+    <hr><!divider>
+    <p>
+        <table>
+          <tr>
+            <td><img height="200px" width="200px" src="https://goo.gl/vDhFxw" alt=""></td>
+            <td>
+              <table>
+                <tr>
+                  <td>Count: <span id="dogOneCount">0</span></td>
+                </tr>
+                <tr>
+                  <td><button onclick="increaseCountDogOne()">Choose me!</button></td>
+                </tr>
+              </table>
+            </td>
+
+          <td><img height="200px" width="200px" src="https://goo.gl/xphPQf" alt=""></td>
+          <td>
+            <table>
+              <tr>
+                <td>Count: <span id="dogTwoCount">0</span></td>
+              </tr>
+              <tr>
+                <td><button onclick="increaseCountDogTwo()">Choose me!</button></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td><img height="200px" width="200px" src="https://goo.gl/VPXhTs" alt=""></td>
+          <td>
+            <table>
+              <tr>
+                <td>Count: 0</td>
+              </tr>
+              <tr>
+                <td><button>Choose me!</button></td>
+              </tr>
+            </table>
+          </td>
+
+          <td><img height="200px" width="200px" src="https://goo.gl/x0lwbg" alt=""></td>
+          <td>
+            <table>
+              <tr>
+                <td>Count: 0</td>
+              </tr>
+              <tr>
+                <td><button>Choose me!</button></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        </table>
+
+    <script>
+      var dog1 = 0
+      function increaseCountDogOne(){
+        dog1 += 1
+        $("#dogOneCount").html(dog1)
+      }
+
+      var dog2 = 0
+      function increaseCountDogTwo(){
+        dog2 += 1
+        $("#dogTwoCount").html(dog2)
+      }
+
+
+    </script>
+    </p>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- html>(head>title)+body>p, shortcut>
+<! '>' means inside>
+<! '+' means another level>
+<b>Some bold text</b> <br>
+<i>some italic text</i> <br>
+<s>strikethrough text</s>
+<!table>(tr>td)*2>
+span#catOneCount
+id is only tagged to one element
+class can be applied to many elements
+inline > id > class (overriding)
+&nbsp; manually create space
+div - blank tag

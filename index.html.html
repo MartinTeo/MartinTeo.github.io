@@ -1,0 +1,103 @@
+<html>
+<head>
+  <!-- Custom styles for this template -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="cover.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Teo XiangQuan Martin</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li id="navHomeTab" class="active"><a href="#" onclick="gotoHome()">Home</a></li>
+                  <li id="navSkillsTab"><a href="#" onclick="gotoSkills()">Skills</a></li>
+                  <li id="navContactTab"><a href="#" onclick="gotoContact()">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" id="home">
+            <img src="https://goo.gl/ABh3Rb" class="img-responsive img-circle center-block">
+            <h1 class="cover-heading">Welcome to my resume.</h1>
+            <p class="lead">Feel free to explore.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="contact">
+            <h1 class="cover-heading">My number is 9999</h1>
+            <p class="lead">Call me maybe</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="skills">
+            <h1 class="cover-heading">My skills are blah blah</h1>
+            <p class="lead">Nothing.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script>
+    //run whatever is inside this function
+    //when page loads
+      $(function(){
+        $("#skills").hide();
+        $("#contact").hide();
+      })
+
+      function gotoHome(){
+        $("#skills").hide();
+        $("#contact").hide();
+        $("#home").slideDown();
+        $("#navHomeTab").attr('class', 'active');
+        $("#navSkillsTab").attr('class', '');
+        $("#navContactTab").attr('class', '');
+      }
+
+      function gotoSkills(){
+        $("#home").hide();
+        $("#contact").hide();
+        $("#skills").slideDown();
+        $("#navHomeTab").attr('class', '');
+        $("#navSkillsTab").attr('class', 'active');
+        $("#navContactTab").attr('class', '');
+      }
+
+      function gotoContact(){
+        $("#skills").hide();
+        $("#home").hide();
+        $("#contact").slideDown();
+        $("#navHomeTab").attr('class', '');
+        $("#navSkillsTab").attr('class', '');
+        $("#navContactTab").attr('class', 'active');
+      }
+    </script>
+
+</body>
+</html>
